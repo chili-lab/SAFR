@@ -17,17 +17,13 @@ The required datasets are automatically downloaded as part of the code execution
 ## Usage
 You can select the dataset and set the regularization parameters directly via command-line arguments.
 
-For example, to run training on the SST2 dataset with both regularization weights set to 1:
+For example, to run training on the SST2 dataset with both regularization lambda set to 1:
 
 ```bash
 python train.py --dataset sst2 --importance_lambda 1 --interaction_lambda 1
 ```
 
 ## Citation
-
-### BibTeX Code Block:
-To format a BibTeX citation:
-```markdown
 ```bibtex
 @article{chang2025safr,
   title={SAFR: Neuron Redistribution for Interpretability},
@@ -35,5 +31,4 @@ To format a BibTeX citation:
   journal={arXiv preprint arXiv:2501.16374},
   year={2025}
 }
-```
 ```
