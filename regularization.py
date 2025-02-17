@@ -38,17 +38,17 @@ def interference_attention(attn_weights):
     interference.masked_fill_(mask, 0)
     return interference
 
-def correlation_interference_loss(all_attn_weights, attn_correlation):
+def correlation_interference_loss(attn_weights, attn_correlation):
     """
     Calculate the correlation interference loss.
     
     Args:
-        all_attn_weights: Tensor of all attention weights.
+        attn_weights: Tensor of attention weights.
         attn_correlation: Normalized attention correlations.
         
     Returns:
         A scalar loss value.
     """
-    interference = interference_attention(all_attn_weights)
+    interference = interference_attention(attn_weights)
     loss = attn_correlation * (1 - interference)
     return torch.mean(loss)
