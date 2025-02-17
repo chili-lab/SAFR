@@ -14,7 +14,7 @@ def polysemanticity_loss(x):
     B, L, E = x.shape
     x_norm = x / (1e-5 + torch.linalg.norm(x, dim=-1, keepdim=True))
     interference = torch.einsum('ble,bme->blm', x_norm, x)
-    mask = torch.eye(L, device=weights.device).unsqueeze(0).expand(B, -1, -1).bool()
+    mask = torch.eye(L, device=x.device).unsqueeze(0).expand(B, -1, -1).bool()
     interference.masked_fill_(mask, 0)
     polysemanticity = torch.linalg.norm(interference, dim=-1)
     polysemanticity_values = polysemanticity / np.sqrt(E)
