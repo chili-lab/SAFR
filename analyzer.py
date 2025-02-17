@@ -30,7 +30,7 @@ class SentimentAnalyzer:
         self.dropout = 0.1
         self.mask_hidden_dim = 1024
         self.lr = 0.0001
-        self.num_epochs = 1
+        self.num_epochs = 100
         self.patience = 3
         self.importance_lambda = self.config.get("importance_lambda", 1)
         self.interaction_lambda = self.config.get("interaction_lambda", 1)
