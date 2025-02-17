@@ -19,7 +19,6 @@ def main():
 
     analyzer = SentimentAnalyzer(file_path="data", config=config)
     model = analyzer.run()
-    print(model)
 
 if __name__ == '__main__':
     main()
