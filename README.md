@@ -11,6 +11,7 @@ This is the offical implementation of [SAFR: Neuron Redistribution for Interpret
 The required datasets are automatically downloaded as part of the code execution. Alternatively, you can manually download:
 
 [SST-2 dataset](https://nlp.stanford.edu/~socherr/stanfordSentimentTreebank.zip)
+
 [IMDB dataset](https://ai.stanford.edu/~amaas/data/sentiment/aclImdb_v1.tar.gz)
 
 ## Usage
@@ -20,7 +21,7 @@ For example, to run training on the SST2 dataset with both regularization weight
 
 ```bash
 python train.py --dataset sst2 --importance_lambda 1 --interaction_lambda 1
-
+```
 
 ## Citation
 
@@ -34,3 +35,5 @@ To format a BibTeX citation:
   journal={arXiv preprint arXiv:2501.16374},
   year={2025}
 }
+```
+```
